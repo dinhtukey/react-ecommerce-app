@@ -1,0 +1,43 @@
+@use "../../scss/" as *;
+
+.footer {
+    padding: 70px 0;
+    box-shadow: $box-shadow;
+    font-size: 1.1rem;
+    position: relative;
+
+    &__logo {
+        height: 38px;
+    }
+
+    &__about {
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-weight: 600;
+    }
+
+    &__content {
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__button-scroll {
+        @include flex(center, center);
+        font-size: 1.5rem;
+        color: $main-bg;
+        position: fixed;
+        right: 30px;
+        bottom: 80px;
+        width: 40px;
+        height: 40px;
+        background-color: $main-color;
+        cursor: pointer;
+    }
+}

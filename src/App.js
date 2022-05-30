@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import './assets/boxicons-2.0.7/css/boxicons.min.css'
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
+import ProductViewModal from './components/product-view-modal/ProductViewModal';
+import RoutesConfig from './config/RoutesConfig';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <div className="container">
+        <div className="main">
+          <RoutesConfig />
+        </div>
+      </div>
+      <Footer />
+      <ProductViewModal />
+    </>
   );
 }
 
