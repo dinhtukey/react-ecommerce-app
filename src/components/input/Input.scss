@@ -1,0 +1,43 @@
+@use "../../scss/" as *;
+
+.input__wrap {
+    @include flex(center, flex-start);
+    height: 50px;
+
+    input {
+        width: 30%;
+        border: 1px solid #dde1ef;
+        background-color: #fff;
+        padding: 0.5rem 0.5rem;
+        font-size: 1rem;
+        border-radius: 5px 0 0 5px;
+        color: #000;
+        z-index: 100;
+        height: 100%;
+        border-right: none;
+        outline: 0;
+
+        @include tablet {
+            width: 100%;
+        }
+
+
+        &:active, &:hover {
+            border-color: $main-color;
+        }
+    }
+
+    .bx-search {
+        background-color: $main-color;
+        cursor: pointer;
+        color: $main-bg;
+        height: 100%;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: -0.5rem;
+        font-size: 2rem;
+        border-radius: 0 5px 5px 0;
+    }
+}

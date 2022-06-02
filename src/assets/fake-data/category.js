@@ -10,6 +10,10 @@ const category = [
     {
         display: "Quần jean",
         categorySlug: "quan-jean"
+    },
+    {
+        display: "Giày",
+        categorySlug: "giay"
     }
 ]
 

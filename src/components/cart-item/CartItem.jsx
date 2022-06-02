@@ -9,7 +9,8 @@ import "./CartItem.scss";
 
 const CartItem = props => {
     const dispatch = useDispatch();
-
+    console.log("itemmmmmmmmmmmmmmmm", props.item);
+    
     const [item, setItem] = useState(props.item);
     const [quantity, setQuantity] = useState(props.item.quantity);
 

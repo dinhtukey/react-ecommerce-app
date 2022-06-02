@@ -83,6 +83,9 @@ const ProductView = props => {
                     <div className="product__images__list__item" onClick={() => setPreview(product.image02)}>
                         <img src={product.image02} alt={product.title} />
                     </div>
+                    <div className="product__images__list__item" onClick={() => setPreview(product.image03)}>
+                        <img src={product.image03} alt={product.title} />
+                    </div>
                 </div>
                 <div className="product__images__main">
                     <img src={preview} alt={product.title} />

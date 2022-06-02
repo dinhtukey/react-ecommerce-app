@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import "./HeroSlide.scss"
 import { Link } from 'react-router-dom';
 import Button from '../button/Button';
+import { useSelector } from 'react-redux';
 HeroSlide.propTypes = {
     data: PropTypes.array.isRequired,
     control: PropTypes.bool,
@@ -12,6 +13,9 @@ HeroSlide.propTypes = {
 };
 
 function HeroSlide(props) {
+    const searchCheck = useSelector((state) => state.search.value);
+    console.log("searchCheck", searchCheck);
+    
     const data = props.data;
     const [activeSlide, setActiveSlide] = useState(0);
 
@@ -41,7 +45,7 @@ function HeroSlide(props) {
     }, [nextSlide, timeOut, props])
     
     return (
-        <div className="hero-slider">
+        <div className={`hero-slider ${searchCheck ? 'active-search' : ''}`}>
             {
                 data.map((item, index) => (
                     <HeroSliderItem key={index} item={item} active={index === activeSlide}/>

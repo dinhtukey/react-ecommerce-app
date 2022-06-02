@@ -130,7 +130,7 @@ function Footer(props) {
                     </div>
                 </Grid>
                 <div className="footer__button-scroll" onClick={scrollToTop} style={{display: visible ? '' : 'none'}}>
-                    <i class='bx bx-up-arrow-alt'></i>
+                    <i className='bx bx-up-arrow-alt'></i>
                 </div>
             </div>
 

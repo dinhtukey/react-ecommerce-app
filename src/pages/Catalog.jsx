@@ -1,8 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import Helmet from '../components/helmet/Helmet';
-import Grid from "../components/grid/Grid";
-import ProductCard from "../components/product-card/ProductCard";
 
 import productData from "../assets/fake-data/products";
 import category from "../assets/fake-data/category";
@@ -87,7 +85,8 @@ function Catalog(props) {
     )
 
     useEffect(() => {
-        updateProducts()
+        updateProducts();
+        // dispatch(toggle()
     }, [updateProducts])
 
     const toggleFilter = () => filterRef.current.classList.toggle('active')
